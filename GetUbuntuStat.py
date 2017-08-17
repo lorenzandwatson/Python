@@ -18,8 +18,7 @@ def print_result(item, result):
         print(item + ":")
         print(result.strip() + "\n")
 
-print("====================================================================================================")
-print("---------------------------------Get Server Status for UbuntuServer---------------------------------")
+
 
 hostname = subprocess.getoutput("hostname")
 print_result("Hostname", hostname)
