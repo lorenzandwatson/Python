@@ -18,7 +18,8 @@ def print_result(item, result):
         print(item + ":")
         print(result.strip() + "\n")
 
-
+print("====================================================================================================")
+print("---------------------------------Get Server Status for UbuntuServer---------------------------------")
 
 hostname = subprocess.getoutput("hostname")
 print_result("Hostname", hostname)
@@ -78,6 +79,8 @@ for i in ssltn_list:
     ssltn_addressport = ssltn_split[3].split(":")
     lsof = subprocess.getoutput("lsof -i:" + ssltn_addressport[1] + " | grep -v ^COMMAND")
     print(lsof)
+
+print("")
 
 psaux = subprocess.getoutput("ps -aux --sort s | head -20")
 print_result("Top 20 Processes", psaux)
